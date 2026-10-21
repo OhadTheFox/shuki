@@ -1,0 +1,18 @@
+.DS_Store
+.vapid-private.json
+.dev.vars
+.wrangler/
+node_modules/
+data/
+
+# test outputs: every run writes them; they stay local (the history keeps the old ones)
+test/*-results.json
+test/*-results.txt
+test/*-results-part.json
+test/stories/results/
+test/a11y-findings.json
+
+# built by sim/build.sh
+sim/bundle.js
+sim/index.html
+sim/style.css

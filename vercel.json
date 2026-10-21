@@ -1,0 +1,58 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "",
+  "outputDirectory": "public",
+  "installCommand": "npm install --omit=dev",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/shuki?shukipath=/api/:path*"
+    },
+    {
+      "source": "/mcp/:path*",
+      "destination": "/api/shuki?shukipath=/mcp/:path*"
+    },
+    {
+      "source": "/mcp",
+      "destination": "/api/shuki?shukipath=/mcp"
+    }
+  ],
+  "functions": {
+    "api/shuki.js": {
+      "maxDuration": 60,
+      "includeFiles": "{migrations,worker,public}/**"
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; img-src 'self' blob: data:; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=(), camera=(self)"
+        }
+      ]
+    },
+    {
+      "source": "/sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
+    }
+  ]
+}

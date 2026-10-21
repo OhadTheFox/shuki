@@ -1,0 +1,34 @@
+{
+  "name": "shuki",
+  "version": "0.21.0",
+  "description": "A home inventory and shopping list you talk to, in Hebrew. A PWA for the whole household, with an LLM (Claude or ChatGPT) that proposes changes you approve.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "dev": "wrangler dev --local",
+    "itest": "node test/api.itest.js",
+    "start": "node --disable-warning=ExperimentalWarning server/node.js",
+    "deploy": "wrangler d1 migrations apply DB --remote && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.151.1"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "cloudflare": {
+    "bindings": {
+      "DB": {
+        "description": "The house's database (D1). Created for you."
+      },
+      "SETUP_CODE": {
+        "description": "8 digits you choose. You type them in the app once, to create the house."
+      }
+    }
+  },
+  "optionalDependencies": {
+    "@libsql/client": "^0.18.0"
+  }
+}

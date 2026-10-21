@@ -1,0 +1,1765 @@
+{
+ "scenarios": [
+  {
+   "id": "R01",
+   "setup": "בית עם אבי, מיכל ויובל (נער). קוטג' בסיסי, 1 גביע, יעד 2, לא ברשימה",
+   "says": "אחי נגמר הקוטג",
+   "seed": {
+    "members": [
+     {
+      "name": "יובל",
+      "gender": "m"
+     }
+    ],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "קוטג' 5%",
+      "count_type": "units",
+      "unit": "גביע",
+      "qty": 1,
+      "is_basic": 1,
+      "target": 2,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "יובל",
+     "chat": "אחי נגמר הקוטג",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "קוטג' 5% → 0",
+    "list": "קוטג' 5% ברשימת הסופר (כמות עד היעד, 2)",
+    "shuki": "מבין את הסלנג, כרטיס אחד «קוטג' נגמר → לרשימה». פונה ליובל בלשון זכר, קצר. לא שואל איזה קוטג' (יש סוג אחד)."
+   },
+   "needs": null
+  },
+  {
+   "id": "R02",
+   "setup": "אבי ומיכל. אין לחם במלאי ואין ברשימה. מיכל בעבודה",
+   "says": "תגיד למיכל לקנות לחם בדרך הביתה",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "אבי",
+     "chat": "תגיד למיכל לקנות לחם בדרך הביתה",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "ללא שינוי (לחם לא נוצר במלאי עד שקונים, החלטה 6)",
+    "list": "לחם ברשימת הסופר",
+    "shuki": "שולח למיכל התראה + שורה בצ'אט בלשון נקבה (למשל «אבי ביקש שתקני לחם בדרך הביתה»). לאבי: אישור שההודעה נשלחה ושהלחם ברשימה."
+   },
+   "needs": null
+  },
+  {
+   "id": "R03",
+   "setup": "אבי, מיכל, יובל ורחל (סבתא). אין בבית אף אחד בשם דני",
+   "says": "תגיד לדני שיביא חלב",
+   "seed": {
+    "members": [
+     {
+      "name": "יובל",
+      "gender": "m"
+     },
+     {
+      "name": "רחל",
+      "gender": "f"
+     }
+    ],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "חלב 3%",
+      "count_type": "units",
+      "unit": "קרטון",
+      "qty": 0,
+      "is_basic": 1,
+      "target": 2,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [
+     {
+      "product": "חלב 3%",
+      "store": "super",
+      "amount": 2,
+      "status": "open"
+     }
+    ],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "אבי",
+     "chat": "תגיד לדני שיביא חלב",
+     "then": "none"
+    }
+   ],
+   "expected": {
+    "inventory": "ללא שינוי",
+    "list": "ללא שינוי (חלב 3% כבר ברשימה, כמות 2, לא כפול)",
+    "shuki": "אומר שאין בבית מישהו בשם דני, מציין מי כן בבית (מיכל, יובל, רחל) ושואל למי לשלוח. לא שולח התראה לאף אחד ולא מנחש. יכול לציין שחלב כבר ברשימה."
+   },
+   "needs": null
+  },
+  {
+   "id": "R04",
+   "setup": "אבי ומיכל. חלב 3% בסיסי, 1 קרטון, יעד 2 (סוג חלב יחיד). לחם אחיד בסיסי, 1 כיכר",
+   "says": "נגמר החלב ותגיד לאורית לקנות לחם",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "חלב 3%",
+      "count_type": "units",
+      "unit": "קרטון",
+      "qty": 1,
+      "is_basic": 1,
+      "target": 2,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     },
+     {
+      "name": "לחם אחיד",
+      "count_type": "units",
+      "unit": "כיכר",
+      "qty": 1,
+      "is_basic": 1,
+      "target": 1,
+      "store": "super",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "מאפים ולחם",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "אבי",
+     "chat": "נגמר החלב ותגיד לאורית לקנות לחם",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "חלב 3% → 0. לחם אחיד ללא שינוי",
+    "list": "חלב 3% (2) ולחם אחיד ברשימת הסופר",
+    "shuki": "מבין ש«אורית» היא מיכל (שגיאת כתיב, אין אחרת דומה). כרטיס עם שני הדברים; התראה + שורה בצ'אט למיכל על הלחם. לא שואל איזה חלב (סוג אחד)."
+   },
+   "needs": null
+  },
+  {
+   "id": "R05",
+   "setup": "אבי, מיכל, יובל. לפני שעה יובל עדכן באפליקציה שהשתמש בקרטון חלב אחרון",
+   "says": "מי גמר את החלב?",
+   "seed": {
+    "members": [
+     {
+      "name": "יובל",
+      "gender": "m"
+     }
+    ],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "חלב 3%",
+      "count_type": "units",
+      "unit": "קרטון",
+      "qty": 1,
+      "is_basic": 1,
+      "target": 2,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "יובל",
+     "act": [
+      {
+       "type": "op",
+       "product": "חלב 3%",
+       "op": {
+        "type": "use",
+        "amount": 1
+       }
+      }
+     ]
+    },
+    {
+     "who": "מיכל",
+     "chat": "מי גמר את החלב?",
+     "then": "none"
+    }
+   ],
+   "expected": {
+    "inventory": "חלב 3% 0 (מהפעולה של יובל)",
+    "list": "חלב 3% ברשימה (בסיסי מתחת ליעד) — אם המערכת מוסיפה אוטומטית; לא נוסף עוד פעם מהשאלה",
+    "shuki": "עונה שיובל עדכן שהחלב נגמר (מתי בערך). לא מציע כרטיס שינוי, לא מאשים, לא ממציא מישהו אחר."
+   },
+   "needs": null
+  },
+  {
+   "id": "R06",
+   "setup": "אבי, מיכל, יובל. חלב 3% סוג יחיד, 0 במלאי, לא ברשימה",
+   "says": "תוסיף 2 חלב / צריך חלב",
+   "seed": {
+    "members": [
+     {
+      "name": "יובל",
+      "gender": "m"
+     }
+    ],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "חלב 3%",
+      "count_type": "units",
+      "unit": "קרטון",
+      "qty": 0,
+      "is_basic": 1,
+      "target": 2,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "מיכל",
+     "chat": "תוסיף 2 חלב",
+     "then": "apply"
+    },
+    {
+     "who": "יובל",
+     "chat": "צריך חלב",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "חלב 3% נשאר 0",
+    "list": "פריט חלב 3% אחד בלבד ברשימת הסופר, כמות 2 (לא 4, לא שתי שורות)",
+    "shuki": "למיכל: כרטיס הוספה 2. ליובל: אומר שחלב כבר ברשימה (מיכל הוסיפה 2), בלי כרטיס כפול או כרטיס שלא משנה כלום."
+   },
+   "needs": null
+  },
+  {
+   "id": "R07",
+   "setup": "אבי, מיכל ועומר (שותף לדירה, קונה לעצמו). אין בירה במלאי",
+   "says": "קניתי 6 בירות לעצמי",
+   "seed": {
+    "members": [
+     {
+      "name": "עומר",
+      "gender": "m"
+     }
+    ],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "עומר",
+     "chat": "קניתי 6 בירות לעצמי",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "נוצר מוצר בירה, 6 יחידות (בקבוק/פחית), מקרר, לא בסיסי",
+    "list": "ללא שינוי",
+    "shuki": "כרטיס אחד להוספה של 6 למלאי המשותף. לא שואל כמה (יש מספר). פונה לעומר בלשון זכר. לא הופך את זה לבסיסי ולא מוסיף לרשימה."
+   },
+   "needs": null
+  },
+  {
+   "id": "R08",
+   "setup": "אבי, מיכל ורחל (סבתא, ישנה אצלם). תה ירוק במלאי: קופסה 1, לא בסיסי",
+   "says": "סבתא: \"אין לכם תה? הייתי רוצה כוס תה\"",
+   "seed": {
+    "members": [
+     {
+      "name": "רחל",
+      "gender": "f"
+     }
+    ],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "תה ירוק",
+      "count_type": "units",
+      "unit": "קופסה",
+      "qty": 1,
+      "is_basic": 0,
+      "target": null,
+      "store": "super",
+      "store2": null,
+      "location_id": "ארון מטבח",
+      "category_id": "יבשים ושימורים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "רחל",
+     "chat": "שלום שוקי, זאת סבתא רחל. אין לכם תה? הייתי רוצה כוס תה",
+     "then": "none"
+    },
+    {
+     "who": "רחל",
+     "chat": "לא צריך, תודה חמוד",
+     "then": "reject"
+    }
+   ],
+   "expected": {
+    "inventory": "ללא שינוי (תה ירוק 1)",
+    "list": "ללא שינוי",
+    "shuki": "לפי החלטה 10: «במלאי רשום שיש תה ירוק (קופסה אחת, בארון המטבח). להוסיף לרשימה?» — בלשון נקבה, מנומס. אחרי «לא צריך» — לא מוסיף, לא מסמן נגמר."
+   },
+   "needs": null
+  },
+  {
+   "id": "R09",
+   "setup": "אבי ומיכל. היום יום ראשון 27/09/2026. אין נרות במלאי",
+   "says": "תזכיר לי לקנות נרות ביום חמישי בערב",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "אבי",
+     "chat": "תזכיר לי לקנות נרות ביום חמישי בערב",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "ללא שינוי",
+    "list": "ללא שינוי חובה (מותר להציע גם להוסיף נרות לרשימה, רק באישור)",
+    "shuki": "כרטיס תזכורת לאבי ליום חמישי הקרוב (01/10/2026) בשעת ערב סבירה (17:00–20:00), עם התאריך והשעה מפורשים. תזכורת אחת נשמרת. לא שואל מתי (הזמן ברור מספיק)."
+   },
+   "needs": "תלוי בתאריך הריצה; לבדוק שהתזכורת היא ליום חמישי הקרוב"
+  },
+  {
+   "id": "R10",
+   "setup": "אבי ומיכל. היום יום ראשון 27/09/2026",
+   "says": "תזכיר לי בשבוע הבא לקנות מגבונים",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "מגבונים",
+      "count_type": "units",
+      "unit": "חבילה",
+      "qty": 1,
+      "is_basic": 0,
+      "target": null,
+      "store": "super",
+      "store2": null,
+      "location_id": "ארון אמבטיה",
+      "category_id": "טואלטיקה",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "מיכל",
+     "chat": "תזכיר לי בשבוע הבא לקנות מגבונים",
+     "then": "none"
+    },
+    {
+     "who": "מיכל",
+     "chat": "ביום ראשון ב-9 בבוקר",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "ללא שינוי",
+    "list": "ללא שינוי",
+    "shuki": "לפי החלטה 8: שואל מתי בשבוע הבא (בלשון נקבה). אחרי התשובה — תזכורת למיכל ליום ראשון 04/10/2026 ב-09:00. תזכורת אחת בלבד."
+   },
+   "needs": "תלוי בתאריך הריצה"
+  },
+  {
+   "id": "R11",
+   "setup": "אבי, מיכל ויובל. היום יום ראשון 27/09/2026",
+   "says": "תזכיר ליובל מחר ב-7 בבוקר לקחת כריכים",
+   "seed": {
+    "members": [
+     {
+      "name": "יובל",
+      "gender": "m"
+     }
+    ],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "מיכל",
+     "chat": "תזכיר ליובל מחר ב-7 בבוקר לקחת כריכים",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "ללא שינוי",
+    "list": "ללא שינוי (כריכים זה לא קנייה)",
+    "shuki": "תזכורת ליובל (לא למיכל) ל-28/09/2026 07:00. אם אי אפשר לקבוע תזכורת לאדם אחר — אומר זאת במפורש ומציע חלופה (הודעה ליובל עכשיו / תזכורת למיכל), לא קובע בשקט למיכל."
+   },
+   "needs": "תלוי בתאריך הריצה"
+  },
+  {
+   "id": "R12",
+   "setup": "אבי ומיכל. חנות \"קצב\" בהגדרות. פרגיות: 1 מגש במקפיא, לא בסיסי, חנות קצב",
+   "says": "נגמרו הפרגיות",
+   "seed": {
+    "members": [],
+    "stores": [
+     "קצב"
+    ],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "פרגיות",
+      "count_type": "units",
+      "unit": "מגש",
+      "qty": 1,
+      "is_basic": 0,
+      "target": null,
+      "store": "קצב",
+      "store2": null,
+      "location_id": "מקפיא",
+      "category_id": "בשר ודגים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "מיכל",
+     "chat": "נגמרו הפרגיות",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "פרגיות → 0",
+    "list": "פרגיות בלשונית קצב (לא בסופר)",
+    "shuki": "כרטיס: פרגיות נגמרו → לרשימה של הקצב (החלטה 1: לא בסיסי שנגמר נכנס מיד)."
+   },
+   "needs": null
+  },
+  {
+   "id": "R13",
+   "setup": "אבי ומיכל. חנות \"קצב\" בהגדרות. בשר טחון לא קיים במלאי",
+   "says": "תוסיף לרשימה קילו בשר טחון",
+   "seed": {
+    "members": [],
+    "stores": [
+     "קצב"
+    ],
+    "pesach": false,
+    "recipes": [],
+    "products": [],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "אבי",
+     "chat": "תוסיף לרשימה קילו בשר טחון",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "ללא שינוי (לא נוצר עד שקונים)",
+    "list": "בשר טחון, 1 ק\"ג, בלשונית קצב",
+    "shuki": "כרטיס הוספה לרשימה של הקצב (לא סופר) עם הכמות 1 ק\"ג."
+   },
+   "needs": null
+  },
+  {
+   "id": "R14",
+   "setup": "אבי ומיכל. חנות \"קצב\". חזה עוף 0, לא בסיסי, חנות קצב, ברשימת הקצב כמות 2. אבי בקצב במצב קניות",
+   "says": "תוסיף גם צלעות",
+   "seed": {
+    "members": [],
+    "stores": [
+     "קצב"
+    ],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "חזה עוף",
+      "count_type": "units",
+      "unit": "מגש",
+      "qty": 0,
+      "is_basic": 0,
+      "target": null,
+      "store": "קצב",
+      "store2": null,
+      "location_id": "מקפיא",
+      "category_id": "בשר ודגים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     },
+     {
+      "name": "צלעות",
+      "count_type": "units",
+      "unit": "מגש",
+      "qty": 0,
+      "is_basic": 0,
+      "target": null,
+      "store": "קצב",
+      "store2": null,
+      "location_id": "מקפיא",
+      "category_id": "בשר ודגים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [
+     {
+      "product": "חזה עוף",
+      "store": "קצב",
+      "amount": 2,
+      "status": "open"
+     }
+    ],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "אבי",
+     "api": "shopping_on",
+     "store": "קצב"
+    },
+    {
+     "who": "אבי",
+     "act": [
+      {
+       "type": "check",
+       "item": "חזה עוף",
+       "amount": 2
+      }
+     ]
+    },
+    {
+     "who": "מיכל",
+     "chat": "אבי בקצב? תוסיף גם צלעות",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "חזה עוף → 2 (עודכן בסימון). צלעות 0",
+    "list": "חזה עוף מסומן. צלעות פתוח בלשונית קצב",
+    "shuki": "כרטיס: צלעות → רשימת הקצב. אבי מקבל התראה שנוסף פריט בזמן שהוא קונה. לא שואל כמה (אפשר כמות רגילה)."
+   },
+   "needs": "api shopping_on עם חנות לפי השם העברי; הריצה צריכה למפות למזהה שנוצר"
+  },
+  {
+   "id": "R15",
+   "setup": "אבי ומיכל. מיכל בסופר, סימנה חלב 3% (2) ולחם אחיד. אחר כך מצלמת קבלה עם חלב ×2, לחם ×1, גבינה צהובה ×1",
+   "says": "צילום קבלה אחרי סימון",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "חלב 3%",
+      "count_type": "units",
+      "unit": "קרטון",
+      "qty": 0,
+      "is_basic": 1,
+      "target": 2,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     },
+     {
+      "name": "לחם אחיד",
+      "count_type": "units",
+      "unit": "כיכר",
+      "qty": 0,
+      "is_basic": 1,
+      "target": 1,
+      "store": "super",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "מאפים ולחם",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     },
+     {
+      "name": "גבינה צהובה",
+      "count_type": "units",
+      "unit": "חבילה",
+      "qty": 0,
+      "is_basic": 1,
+      "target": 1,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [
+     {
+      "product": "חלב 3%",
+      "store": "super",
+      "amount": 2,
+      "status": "open"
+     },
+     {
+      "product": "לחם אחיד",
+      "store": "super",
+      "amount": 1,
+      "status": "open"
+     }
+    ],
+    "shopping": {
+     "who": "מיכל",
+     "store": "super"
+    },
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "מיכל",
+     "act": [
+      {
+       "type": "check",
+       "item": "חלב 3%",
+       "amount": 2
+      },
+      {
+       "type": "check",
+       "item": "לחם אחיד",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "expected": {
+    "inventory": "אחרי הקבלה: חלב 3% 2 (לא 4), לחם אחיד 1 (לא 2), גבינה צהובה 1",
+    "list": "שלושתם לא פתוחים ברשימה",
+    "shuki": "כרטיס קבלה שמוסיף רק את הגבינה הצהובה ומציין שחלב ולחם כבר סומנו (החלטה 27)."
+   },
+   "needs": "דורש העלאת תמונת קבלה — לא נתמך בריצה; להריץ רק את חלק הסימון"
+  },
+  {
+   "id": "R16",
+   "setup": "מתכונים שמורים: שקשוקה, פסטה ברוטב עגבניות, עוגת שוקולד. יש ביצים 12, עגבניות 5, בצל הרבה, רסק 2. פסטה 0. אין קקאו",
+   "says": "מה אפשר לבשל?",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": false,
+    "recipes": [
+     {
+      "name": "שקשוקה",
+      "ingredients": "4 ביצים, 3 עגבניות, בצל, רסק עגבניות",
+      "text": "מטגנים בצל, מוסיפים עגבניות ורסק, שוברים ביצים ומכסים 5 דקות"
+     },
+     {
+      "name": "פסטה ברוטב עגבניות",
+      "ingredients": "חבילת פסטה, רסק עגבניות, שום",
+      "text": "מבשלים פסטה, מחממים רסק עם שום ומערבבים"
+     },
+     {
+      "name": "עוגת שוקולד",
+      "ingredients": "3 ביצים, כוס סוכר, חצי כוס קקאו, כוס קמח, חצי כוס שמן",
+      "text": "מערבבים הכול ואופים 35 דקות ב-180"
+     }
+    ],
+    "products": [
+     {
+      "name": "ביצים L",
+      "count_type": "pack",
+      "unit": "תבנית",
+      "qty": 12,
+      "is_basic": 1,
+      "target": 12,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false,
+      "pack_size": 12
+     },
+     {
+      "name": "עגבניות",
+      "count_type": "units",
+      "unit": "יחידה",
+      "qty": 5,
+      "is_basic": 1,
+      "target": 6,
+      "store": "greengrocer",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "ירקות ופירות",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     },
+     {
+      "name": "בצל",
+      "count_type": "level",
+      "unit": "יחידה",
+      "qty": 0,
+      "is_basic": 1,
+      "target": null,
+      "store": "greengrocer",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "ירקות ופירות",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false,
+      "level": "plenty"
+     },
+     {
+      "name": "רסק עגבניות",
+      "count_type": "units",
+      "unit": "פחית",
+      "qty": 2,
+      "is_basic": 0,
+      "target": null,
+      "store": "super",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "יבשים ושימורים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     },
+     {
+      "name": "פסטה",
+      "count_type": "units",
+      "unit": "חבילה",
+      "qty": 0,
+      "is_basic": 1,
+      "target": 2,
+      "store": "super",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "יבשים ושימורים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "מיכל",
+     "chat": "מה אפשר לבשל היום?",
+     "then": "none"
+    }
+   ],
+   "expected": {
+    "inventory": "ללא שינוי",
+    "list": "ללא שינוי",
+    "shuki": "מציע שקשוקה (יש הכול). מציין שלפסטה ברוטב חסרה פסטה ולעוגה חסר קקאו (וגם סוכר/קמח/שמן אם לא במלאי). לא מוסיף לרשימה ולא מוריד מלאי בלי שביקשו."
+   },
+   "needs": null
+  },
+  {
+   "id": "R17",
+   "setup": "כמו R16: ביצים 12, עגבניות 5, בצל הרבה, רסק 2. מתכון שקשוקה שמור",
+   "says": "הכנתי שקשוקה",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": false,
+    "recipes": [
+     {
+      "name": "שקשוקה",
+      "ingredients": "4 ביצים, 3 עגבניות, בצל, רסק עגבניות",
+      "text": "מטגנים בצל, מוסיפים עגבניות ורסק, שוברים ביצים ומכסים 5 דקות"
+     },
+     {
+      "name": "פסטה ברוטב עגבניות",
+      "ingredients": "חבילת פסטה, רסק עגבניות, שום",
+      "text": "מבשלים פסטה, מחממים רסק עם שום ומערבבים"
+     },
+     {
+      "name": "עוגת שוקולד",
+      "ingredients": "3 ביצים, כוס סוכר, חצי כוס קקאו, כוס קמח, חצי כוס שמן",
+      "text": "מערבבים הכול ואופים 35 דקות ב-180"
+     }
+    ],
+    "products": [
+     {
+      "name": "ביצים L",
+      "count_type": "pack",
+      "unit": "תבנית",
+      "qty": 12,
+      "is_basic": 1,
+      "target": 12,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false,
+      "pack_size": 12
+     },
+     {
+      "name": "עגבניות",
+      "count_type": "units",
+      "unit": "יחידה",
+      "qty": 5,
+      "is_basic": 1,
+      "target": 6,
+      "store": "greengrocer",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "ירקות ופירות",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     },
+     {
+      "name": "בצל",
+      "count_type": "level",
+      "unit": "יחידה",
+      "qty": 0,
+      "is_basic": 1,
+      "target": null,
+      "store": "greengrocer",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "ירקות ופירות",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false,
+      "level": "plenty"
+     },
+     {
+      "name": "רסק עגבניות",
+      "count_type": "units",
+      "unit": "פחית",
+      "qty": 2,
+      "is_basic": 0,
+      "target": null,
+      "store": "super",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "יבשים ושימורים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     },
+     {
+      "name": "פסטה",
+      "count_type": "units",
+      "unit": "חבילה",
+      "qty": 0,
+      "is_basic": 1,
+      "target": 2,
+      "store": "super",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "יבשים ושימורים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "אבי",
+     "chat": "הכנתי שקשוקה",
+     "then": "none"
+    },
+    {
+     "who": "אבי",
+     "chat": "6 ביצים, 4 עגבניות, בצל אחד ופחית רסק",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "ביצים 6, עגבניות 1, רסק 1, בצל נשאר ברמה (הרבה/מעט לפי שיקול, לא נגמר)",
+    "list": "ביצים ועגבניות (בסיסיים מתחת ליעד) נכנסים לרשימה; אין שקשוקה ברשימה",
+    "shuki": "לפי החלטה 19: קודם שואל במה השתמשו (אפשר להציע את כמויות המתכון). אחרי התשובה: כרטיס הורדה לפי מה שנאמר (6 ביצים, לא 4 של המתכון). לא יוצר מוצר \"שקשוקה\" במלאי (החלטה 24: שאריות רק כמנות במקפיא)."
+   },
+   "needs": null
+  },
+  {
+   "id": "R18",
+   "setup": "מתכון עוגת שוקולד שמור. יש ביצים 12, סוכר, קמח, שמן. אין קקאו במלאי",
+   "says": "אני רוצה להכין עוגת שוקולד מחר, חסר משהו?",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": false,
+    "recipes": [
+     {
+      "name": "שקשוקה",
+      "ingredients": "4 ביצים, 3 עגבניות, בצל, רסק עגבניות",
+      "text": "מטגנים בצל, מוסיפים עגבניות ורסק, שוברים ביצים ומכסים 5 דקות"
+     },
+     {
+      "name": "פסטה ברוטב עגבניות",
+      "ingredients": "חבילת פסטה, רסק עגבניות, שום",
+      "text": "מבשלים פסטה, מחממים רסק עם שום ומערבבים"
+     },
+     {
+      "name": "עוגת שוקולד",
+      "ingredients": "3 ביצים, כוס סוכר, חצי כוס קקאו, כוס קמח, חצי כוס שמן",
+      "text": "מערבבים הכול ואופים 35 דקות ב-180"
+     }
+    ],
+    "products": [
+     {
+      "name": "ביצים L",
+      "count_type": "pack",
+      "unit": "תבנית",
+      "qty": 12,
+      "is_basic": 1,
+      "target": 12,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false,
+      "pack_size": 12
+     },
+     {
+      "name": "סוכר",
+      "count_type": "inuse",
+      "unit": "שקית",
+      "qty": 1,
+      "is_basic": 1,
+      "target": 1,
+      "store": "super",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "יבשים ושימורים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false,
+      "is_open": 1
+     },
+     {
+      "name": "קמח",
+      "count_type": "inuse",
+      "unit": "שקית",
+      "qty": 1,
+      "is_basic": 1,
+      "target": 1,
+      "store": "super",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "יבשים ושימורים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false,
+      "is_open": 1
+     },
+     {
+      "name": "שמן קנולה",
+      "count_type": "inuse",
+      "unit": "בקבוק",
+      "qty": 2,
+      "is_basic": 1,
+      "target": 1,
+      "store": "super",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "יבשים ושימורים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false,
+      "is_open": 1
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "מיכל",
+     "chat": "אני רוצה להכין עוגת שוקולד מחר, חסר משהו?",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "ללא שינוי",
+    "list": "קקאו ברשימת הסופר (אחרי אישור)",
+    "shuki": "אומר שחסר רק קקאו ומציע כרטיס להוסיף לרשימה. לא מוריד מלאי (עוד לא הכינו)."
+   },
+   "needs": null
+  },
+  {
+   "id": "R19",
+   "setup": "מצב פסח פעיל. לחם אחיד בסיסי, 1 כיכר, יעד 1. אורז בסיסי (בשימוש + סגור)",
+   "says": "נגמר הלחם",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": true,
+    "recipes": [],
+    "products": [
+     {
+      "name": "לחם אחיד",
+      "count_type": "units",
+      "unit": "כיכר",
+      "qty": 1,
+      "is_basic": 1,
+      "target": 1,
+      "store": "super",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "מאפים ולחם",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     },
+     {
+      "name": "אורז",
+      "count_type": "inuse",
+      "unit": "שקית",
+      "qty": 2,
+      "is_basic": 1,
+      "target": 1,
+      "store": "super",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "יבשים ושימורים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false,
+      "is_open": 1
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "אבי",
+     "chat": "נגמר הלחם",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "לחם אחיד → 0",
+    "list": "לחם לא נכנס לרשימה",
+    "shuki": "מסמן שהלחם נגמר ולא שם אותו ברשימה בגלל פסח (יכול לומר זאת בקצרה ולהציע להוסיף אם בכל זאת רוצים). לא מציע לחם בעצמו."
+   },
+   "needs": null
+  },
+  {
+   "id": "R20",
+   "setup": "מצב פסח פעיל. פסטה בסיסית 0 (יעד 2), לא ברשימה. חלב 3% 0, בסיסי, לא ברשימה",
+   "says": "מה חסר לנו? / תוסיף פסטה בכל זאת",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": true,
+    "recipes": [],
+    "products": [
+     {
+      "name": "פסטה",
+      "count_type": "units",
+      "unit": "חבילה",
+      "qty": 0,
+      "is_basic": 1,
+      "target": 2,
+      "store": "super",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "יבשים ושימורים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     },
+     {
+      "name": "חלב 3%",
+      "count_type": "units",
+      "unit": "קרטון",
+      "qty": 0,
+      "is_basic": 1,
+      "target": 2,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "מיכל",
+     "chat": "מה חסר לנו בבית?",
+     "then": "none"
+    },
+    {
+     "who": "מיכל",
+     "chat": "תוסיף פסטה בכל זאת",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "ללא שינוי",
+    "list": "פסטה ברשימת הסופר (כי ביקשו בשם). חלב — אם הוצע ואושר; לא חובה",
+    "shuki": "בתשובה הראשונה מזכיר חלב ולא מזכיר פסטה. אחרי «תוסיף פסטה» — מוסיף בלי ויכוח (אפשר הערה קצרה על פסח)."
+   },
+   "needs": null
+  },
+  {
+   "id": "R21",
+   "setup": "מצב פסח כבוי (ברירת מחדל). פסטה בסיסית 1 חבילה, יעד 2, לא ברשימה",
+   "says": "נשארה מעט פסטה",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "פסטה",
+      "count_type": "units",
+      "unit": "חבילה",
+      "qty": 1,
+      "is_basic": 1,
+      "target": 2,
+      "store": "super",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "יבשים ושימורים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "אבי",
+     "chat": "נשארה מעט פסטה",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "פסטה 1 (או מסומנת כנגמרת), לא 0",
+    "list": "פסטה ברשימת הסופר (החלטה 7)",
+    "shuki": "בסיסי ש«נשאר מעט» → לרשימה ישר, בלי כרטיס 3 האפשרויות. שום התייחסות לפסח."
+   },
+   "needs": null
+  },
+  {
+   "id": "R22",
+   "setup": "אבי ומיכל. אין יין ואין במבה במלאי",
+   "says": "קניתי לאורחים 2 בקבוקי יין ו-3 במבה",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "מיכל",
+     "chat": "קניתי לאורחים 2 בקבוקי יין ו-3 במבה",
+     "then": "apply"
+    },
+    {
+     "who": "אבי",
+     "chat": "נגמר היין",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "יין 0 אחרי ההודעה השנייה; במבה 3. שניהם מסומנים כחד-פעמיים/לאורחים, לא בסיסיים",
+    "list": "יין לא נכנס לרשימה (החלטה 3 גוברת על החלטה 1 למוצר לאורחים); במבה לא ברשימה",
+    "shuki": "כרטיס ראשון מוסיף למלאי ומציין שזה לאורחים. בשני: מסמן נגמר, לא מציע להשלים (אפשר «אם תרצה, תגיד לי להוסיף»)."
+   },
+   "needs": null
+  },
+  {
+   "id": "R23",
+   "setup": "אבי ומיכל. יוגורט: 1 גביע, לא בסיסי",
+   "says": "קניתי יוגורטים",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "יוגורט",
+      "count_type": "units",
+      "unit": "גביע",
+      "qty": 1,
+      "is_basic": 0,
+      "target": null,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "אבי",
+     "chat": "קניתי יוגורטים",
+     "then": "none"
+    },
+    {
+     "who": "אבי",
+     "chat": "4",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "יוגורט 5",
+    "list": "ללא שינוי",
+    "shuki": "החלטה 2: שואל כמה (אפשר כפתורים). אחרי «4» — כרטיס +4."
+   },
+   "needs": null
+  },
+  {
+   "id": "R24",
+   "setup": "חלב 3% בסיסי 2 קרטונים וחלב סויה לא בסיסי 1 קרטון",
+   "says": "נגמר החלב",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "חלב 3%",
+      "count_type": "units",
+      "unit": "קרטון",
+      "qty": 2,
+      "is_basic": 1,
+      "target": 2,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     },
+     {
+      "name": "חלב סויה",
+      "count_type": "units",
+      "unit": "קרטון",
+      "qty": 1,
+      "is_basic": 0,
+      "target": null,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "מיכל",
+     "chat": "נגמר החלב",
+     "then": "none"
+    },
+    {
+     "who": "מיכל",
+     "chat": "הסויה",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "חלב סויה 0; חלב 3% נשאר 2",
+    "list": "חלב סויה ברשימת הסופר (החלטה 1)",
+    "shuki": "החלטה 14: שואל איזה חלב (3% / סויה). לא מניח. אחרי «הסויה» — כרטיס על הסויה בלבד."
+   },
+   "needs": null
+  },
+  {
+   "id": "R25",
+   "setup": "טונה: 3 קופסאות במזווה, לא בסיסי",
+   "says": "אין לנו טונה",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "טונה",
+      "count_type": "units",
+      "unit": "קופסה",
+      "qty": 3,
+      "is_basic": 0,
+      "target": null,
+      "store": "super",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "יבשים ושימורים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "אבי",
+     "chat": "אין לנו טונה",
+     "then": "none"
+    },
+    {
+     "who": "אבי",
+     "chat": "אה מצאתי, עזוב",
+     "then": "reject"
+    }
+   ],
+   "expected": {
+    "inventory": "טונה נשארת 3",
+    "list": "ללא שינוי",
+    "shuki": "«במלאי רשום שיש טונה (3 קופסאות, במזווה). להוסיף לרשימה?». אחרי «מצאתי, עזוב» — לא משנה כלום."
+   },
+   "needs": null
+  },
+  {
+   "id": "R26",
+   "setup": "אבי, מיכל, יובל. מיכל בסופר במצב קניות. במבה (רגילה) 2 שקיות. במבה נוגט לא קיימת",
+   "says": "יובל: תוסיפו במבה נוגט pls",
+   "seed": {
+    "members": [
+     {
+      "name": "יובל",
+      "gender": "m"
+     }
+    ],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "במבה",
+      "count_type": "units",
+      "unit": "שקית",
+      "qty": 2,
+      "is_basic": 0,
+      "target": null,
+      "store": "super",
+      "store2": null,
+      "location_id": "מזווה",
+      "category_id": "יבשים ושימורים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": {
+     "who": "מיכל",
+     "store": "super"
+    },
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "יובל",
+     "chat": "תוסיפו במבה נוגט pls",
+     "then": "apply"
+    },
+    {
+     "who": "מיכל",
+     "act": [
+      {
+       "type": "check",
+       "item": "במבה נוגט",
+       "amount": 1
+      }
+     ]
+    }
+   ],
+   "expected": {
+    "inventory": "נוצר מוצר במבה נוגט 1 (נפרד מבמבה, החלטה 15). במבה רגילה נשארת 2",
+    "list": "במבה נוגט מסומן",
+    "shuki": "כרטיס: במבה נוגט → רשימת הסופר. לא ממזג עם במבה רגילה. מיכל מקבלת התראה (היא בחנות)."
+   },
+   "needs": null
+  },
+  {
+   "id": "R27",
+   "setup": "חלב 3% בסיסי 0 קרטונים, ברשימה (2)",
+   "says": "קניתי 3 קרטוני חלב... רגע, 2",
+   "seed": {
+    "members": [],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "חלב 3%",
+      "count_type": "units",
+      "unit": "קרטון",
+      "qty": 0,
+      "is_basic": 1,
+      "target": 2,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [
+     {
+      "product": "חלב 3%",
+      "store": "super",
+      "amount": 2,
+      "status": "open"
+     }
+    ],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "אבי",
+     "chat": "קניתי 3 קרטוני חלב",
+     "then": "none"
+    },
+    {
+     "who": "אבי",
+     "chat": "רגע טעות, 2 לא 3",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "חלב 3% → 2 (לא 3, לא 5)",
+    "list": "חלב 3% יורד מהרשימה (הגיע ליעד)",
+    "shuki": "החלטה 5: הכרטיס השני מחליף את הראשון (אותו מוצר); נשאר כרטיס אחד בלבד שמאושר."
+   },
+   "needs": null
+  },
+  {
+   "id": "R28",
+   "setup": "אבי, מיכל ועומר (שותף). נייר טואלט בסיסי 0, יעד 1, לא ברשימה",
+   "says": "תגיד לעומר שנגמר נייר טואלט ושיקנה בדרך",
+   "seed": {
+    "members": [
+     {
+      "name": "עומר",
+      "gender": "m"
+     }
+    ],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "נייר טואלט",
+      "count_type": "pack",
+      "unit": "חבילה",
+      "qty": 0,
+      "is_basic": 1,
+      "target": 1,
+      "store": "super",
+      "store2": null,
+      "location_id": "ארון אמבטיה",
+      "category_id": "טואלטיקה",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false,
+      "pack_size": 32
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "מיכל",
+     "chat": "תגיד לעומר שנגמר נייר טואלט ושיקנה בדרך",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "נייר טואלט 0",
+    "list": "נייר טואלט ברשימת הסופר",
+    "shuki": "שולח לעומר התראה + שורה בצ'אט בלשון זכר («מיכל ביקשה שתקנה נייר טואלט בדרך»). מוסיף לרשימה כדי שכולם יראו."
+   },
+   "needs": null
+  },
+  {
+   "id": "R29",
+   "setup": "אבי, מיכל ונועם (אח של מיכל, גר איתם). חלב 3% סוג יחיד, 0, לא ברשימה",
+   "says": "תגיד לנועם לקנות חלב",
+   "seed": {
+    "members": [
+     {
+      "name": "נועם",
+      "gender": "m"
+     }
+    ],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "חלב 3%",
+      "count_type": "units",
+      "unit": "קרטון",
+      "qty": 0,
+      "is_basic": 1,
+      "target": 2,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "אבי",
+     "chat": "תגיד לנועם לקנות חלב",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "ללא שינוי",
+    "list": "חלב 3% ברשימת הסופר",
+    "shuki": "ההודעה והתראה נשלחות לנועם (לא למיכל), בלשון זכר. אם לא בטוח — שואל, לא שולח למיכל."
+   },
+   "needs": null
+  },
+  {
+   "id": "R30",
+   "setup": "אבי, מיכל, יובל. ביצים L בסיסי, תבנית 12, יעד 12",
+   "says": "יובל: נגמרו הביצים / מיכל: מי אמר? יש פה 6",
+   "seed": {
+    "members": [
+     {
+      "name": "יובל",
+      "gender": "m"
+     }
+    ],
+    "stores": [],
+    "pesach": false,
+    "recipes": [],
+    "products": [
+     {
+      "name": "ביצים L",
+      "count_type": "pack",
+      "unit": "תבנית",
+      "qty": 12,
+      "is_basic": 1,
+      "target": 12,
+      "store": "super",
+      "store2": null,
+      "location_id": "מקרר",
+      "category_id": "מוצרי חלב, גבינות וביצים",
+      "shelf_days": null,
+      "open_days": null,
+      "running_low": false,
+      "pack_size": 12
+     }
+    ],
+    "list": [],
+    "shopping": null,
+    "away": null
+   },
+   "steps": [
+    {
+     "who": "יובל",
+     "chat": "נגמרו הביצים",
+     "then": "apply"
+    },
+    {
+     "who": "מיכל",
+     "chat": "מי אמר שנגמרו הביצים? יש פה עוד 6",
+     "then": "apply"
+    }
+   ],
+   "expected": {
+    "inventory": "ביצים L → 6",
+    "list": "ביצים L נשארות ברשימה (בסיסי מתחת ליעד 12, החלטה 4) עם כמות להשלמה",
+    "shuki": "למיכל: עונה שיובל עדכן, ומציע כרטיס לתקן ל-6. לא מוריד מהרשימה."
+   },
+   "needs": null
+  }
+ ]
+}

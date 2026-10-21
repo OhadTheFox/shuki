@@ -1,0 +1,3 @@
+# The "Deploy to Cloudflare" button asks for these. Nothing else is needed: the model key can be entered in the app.
+# 8 digits you choose, for creating the house in the app the first time
+SETUP_CODE=

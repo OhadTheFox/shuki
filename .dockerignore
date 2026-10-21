@@ -1,0 +1,10 @@
+node_modules
+.wrangler
+.dev.vars
+.vapid-private.json
+.git
+data
+sim
+test
+docs
+mockup

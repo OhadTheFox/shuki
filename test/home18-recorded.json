@@ -1,0 +1,117 @@
+{
+ "h17-map m8-r1": {
+  "reply": "חלב השקדים שלכם מוצר קבוע ובלי סגור ברזרבה, אז חצי קרטון פתוח = נשאר מעט ועולה לרשימה. בשביל החמוצים, זה מוצר חדש בשבילי - האם להוסיף אותו למלאי?",
+  "face": "neutral",
+  "actions": [
+   {
+    "kind": "op",
+    "product_id": 41,
+    "op": {
+     "type": "low"
+    }
+   }
+  ]
+ },
+ "h17-map m8-r2": {
+  "reply": "חלב השקדים הוא מוצר קבוע שבלי רזרבה, אז אני מסמן שנשאר ממנו מעט. חמוצים לא רשומים אצלי, להוסיף אותם?",
+  "face": "neutral",
+  "actions": [
+   {
+    "kind": "op",
+    "product_id": 41,
+    "op": {
+     "type": "low"
+    }
+   },
+   {
+    "kind": "create",
+    "product": {
+     "name": "חמוצים",
+     "count_type": "level",
+     "category_id": "שימורים ורטבים",
+     "location_id": "מקרר",
+     "level": "little",
+     "qty": 1
+    }
+   }
+  ]
+ },
+ "h17b-map m8-r2": {
+  "reply": "האם לעדכן שנשאר מעט חלב שקדים? וחמוצים לא רשומים אצלי, אז אם תרצה שאוסיף אותם, רק תגיד.",
+  "face": "neutral",
+  "actions": [
+   {
+    "kind": "op",
+    "product_id": 41,
+    "op": {
+     "type": "low"
+    }
+   }
+  ]
+ },
+ "h17-map m7-r3": {
+  "reply": "מעולה, רושם את זה למזווה. האם סיימתם למפות את המזווה, או שיש עוד?",
+  "face": "happy",
+  "actions": [
+   {
+    "kind": "create",
+    "product": {
+     "name": "פפריקה מעושנת",
+     "count_type": "inuse",
+     "is_open": true,
+     "qty": 0,
+     "location_id": "מזווה",
+     "category_id": "תבלינים ושמנים"
+    }
+   },
+   {
+    "kind": "create",
+    "product": {
+     "name": "שמן קנולה",
+     "count_type": "inuse",
+     "is_open": true,
+     "qty": 0,
+     "location_id": "מזווה",
+     "category_id": "תבלינים ושמנים"
+    }
+   },
+   {
+    "kind": "create",
+    "product": {
+     "name": "קוסקוס",
+     "count_type": "units",
+     "qty": 1,
+     "location_id": "מזווה",
+     "category_id": "יבשים",
+     "chametz": true
+    }
+   },
+   {
+    "kind": "create",
+    "product": {
+     "name": "סודה",
+     "count_type": "units",
+     "qty": 1,
+     "location_id": "מזווה",
+     "category_id": "משקאות"
+    }
+   },
+   {
+    "kind": "create",
+    "product": {
+     "name": "סוכר",
+     "count_type": "inuse",
+     "is_open": true,
+     "qty": 0,
+     "location_id": "מזווה",
+     "category_id": "יבשים"
+    }
+   }
+  ],
+  "options": [
+   "סיימנו למפות את המזווה",
+   "נמשיך למפות",
+   "נעצור כאן"
+  ]
+ }
+}

@@ -1,0 +1,12 @@
+[
+  { "name": "חביתה", "ings": [{ "qty": 3, "unit": null, "name": "ביצים" }, { "qty": 1, "unit": "כף", "name": "שמן" }, { "qty": null, "unit": null, "name": "מלח" }], "text": "טורפים את הביצים.\nמחממים שמן במחבת.\nיוצקים ומטגנים.", "tags": "ארוחות בוקר", "serves": 1, "url": "https://example.com/omelet" },
+  { "name": "חביתה", "ings": [{ "qty": 2, "unit": null, "name": "ביצים" }, { "qty": null, "unit": null, "name": "עירית" }], "text": "טורפים ומטגנים.", "tags": "ארוחות בוקר", "serves": null, "url": "https://example.com/omelet-2" },
+  { "name": "חביתת ירק", "ings": [{ "qty": 3, "unit": null, "name": "ביצים" }, { "qty": 1, "unit": "צרור", "name": "פטרוזיליה" }], "text": "קוצצים, טורפים ומטגנים.", "tags": "ארוחות בוקר, ישראלי", "serves": 2, "url": "https://example.com/omelet" },
+  { "name": "מרק בלי מצרכים", "ings": [], "text": "מבשלים.", "tags": "מרקים", "serves": 4, "url": "https://example.com/soup" },
+  { "name": "", "ings": [{ "qty": 1, "unit": null, "name": "גזר" }], "text": "", "tags": "סלט", "serves": null, "url": "https://example.com/carrot" },
+  { "name": "עוגת שוקולד של סבתא עם קרם מסקרפונה, פירות יער טריים ושכבה דקה של ריבת חלב מבית סבתא", "ings": [{ "qty": 200, "unit": "גרם", "name": "שוקולד מריר" }, { "qty": 4, "unit": null, "name": "ביצים" }], "text": "ממיסים ואופים.", "tags": "קינוחים, עוגות", "serves": 10, "url": "https://example.com/cake" },
+  { "name": "עוגיות טחינה", "ings": [{ "qty": null, "unit": null, "name": "טחינה גולמית" }, { "qty": 0.25, "unit": "כפית", "name": "מלח" }, { "qty": 0.333, "unit": "כוס", "name": "סוכר" }, { "qty": 200000, "unit": "גרם", "name": "קמח" }, { "qty": null, "unit": "קורט", "name": "קינמון" }], "text": "מערבבים ואופים.", "tags": "קינוחים", "serves": null, "url": "https://example.com/cookies" },
+  { "name": "רוטב עגבניות מהיר", "ings": [{ "qty": 1, "unit": "קופסה", "name": "רסק עגבניות" }, { "qty": 2, "unit": "שן", "name": "שום" }], "text": "מבשלים 10 דקות.", "tags": "רטבים, איטלקי", "serves": 4, "url": "https://example.com/sauce" },
+  { "name": "סלט ירקות קצוץ", "ings": [{ "qty": 3, "unit": null, "name": "עגבניות" }, { "qty": 1, "unit": null, "name": "מלפפון" }], "text": "", "tags": "סלט", "serves": null, "url": "https://example.com/salad" },
+  { "name": "פיתות בטאבון", "ings": [{ "qty": 500, "unit": "גרם", "name": "קמח" }, { "qty": 1, "unit": "כף", "name": "שמרים" }], "text": "לשים ואופים.", "tags": "לחמים ומאפים", "serves": 6, "url": "http://example.com/pita" }
+]

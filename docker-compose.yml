@@ -1,0 +1,15 @@
+# docker compose up -d --build   (the setup code is in: docker compose logs shuki)
+services:
+  shuki:
+    build: .
+    container_name: shuki
+    ports: ["8787:8787"]
+    volumes: ["shuki-data:/data"]
+    environment:
+      # one of these, or enter a key in the app:
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      TRUST_PROXY: ${TRUST_PROXY:-}
+    restart: unless-stopped
+volumes:
+  shuki-data:

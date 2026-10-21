@@ -1,0 +1,34 @@
+# Cloudflare Worker: serves the app, the household API (D1), Shuki's brain and the reminders. Deploy with ./deploy.sh
+name = "shuki"
+main = "worker/index.js"
+compatibility_date = "2025-09-01"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[observability]   # Workers Logs: Cloudflare dashboard → Workers → shuki → Logs (errors from the server and from the phones)
+enabled = true
+
+[triggers]
+crons = ["0 * * * *"]   # every hour; the worker decides what is due, in the house's time zone
+
+[vars]
+VAPID_PUBLIC = "REPLACE_VAPID_PUBLIC"
+VAPID_SUBJECT = "mailto:shuki@users.noreply.github.com"
+MODEL = "claude-sonnet-5"   # Haiku (claude-haiku-4-5-20251001) is cheaper but its Hebrew was noticeably weaker in testing
+MONTHLY_COST_CAP = "10"   # dollars a month for the chat (the admin can change it in the app); at the cap the chat rests
+
+[[d1_databases]]
+binding = "DB"
+database_name = "shuki"
+database_id = "REPLACE_D1_ID"
+migrations_dir = "migrations"
+
+# run the worker next to its database: every change is many small queries, and each one crossed the world
+# (the phone still reaches the nearest edge first). "smart" never moved it: on 15/10 it still ran in Tel Aviv
+# (cf-placement: local-TLV) with D1 in Virginia (served by IAD), about 0.1 s for each of the ~70 queries of a chat turn,
+# one after another. A placement hint puts it by the database: after a deploy, a response says cf-placement: remote-IAD
+# (or near it). D1 in another place: the hint goes with it (docs/firstuse-report.md)
+[placement]
+region = "aws:us-east-1"
